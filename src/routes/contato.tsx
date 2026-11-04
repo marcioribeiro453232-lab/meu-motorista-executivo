@@ -43,7 +43,8 @@ function Page() {
     setErr({});
     const d = r.data;
     const msg = `${site.whatsappMessage}\n\nNome: ${d.nome}\nOrigem: ${d.origem}\nDestino: ${d.destino}\nData: ${d.data}\nPassageiros: ${d.passageiros}${d.detalhes ? `\nDetalhes: ${d.detalhes}` : ""}`;
-    window.open(whatsappLink(msg), "_blank", "noopener");
+    const w = window.open(whatsappLink(msg), "_blank");
+    if (!w) window.location.href = whatsappLink(msg);
   };
 
   const field = (k: keyof Form, label: string, type = "text") => (
