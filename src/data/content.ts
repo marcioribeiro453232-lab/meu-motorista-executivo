@@ -1,3 +1,6 @@
+import sedan from "@/assets/frota-sedan.jpg";
+import suv from "@/assets/frota-suv.jpg";
+import minivan from "@/assets/frota-minivan.jpg";
 import { ShieldCheck, Clock, Car, MapPinned, Briefcase, Plane, Users, CalendarCheck, Route as RouteIcon, Sparkles, HeartHandshake, Building2 } from "lucide-react";
 import type { Item } from "@/components/sections/Blocks";
 
@@ -20,7 +23,7 @@ export const servicos: Item[] = [
 ];
 
 export const frota = [
-  { name: "Sedan executivo", seats: "Até 4 passageiros", text: "Conforto e elegância para viagens executivas e traslados." },
-  { name: "SUV premium", seats: "Até 4 passageiros + bagagens", text: "Espaço extra e segurança para viagens longas e estradas." },
-  { name: "Minivan", seats: "Até 6 passageiros", text: "Ideal para famílias e pequenos grupos viajarem juntos." },
+  { image: sedan, name: "Sedan executivo", seats: "Até 4 passageiros", text: "Conforto e elegância para viagens executivas e traslados." },
+  { image: suv, name: "SUV premium", seats: "Até 4 passageiros + bagagens", text: "Espaço extra e segurança para viagens longas e estradas." },
+  { image: minivan, name: "Minivan", seats: "Até 6 passageiros", text: "Ideal para famílias e pequenos grupos viajarem juntos." },
 ];

@@ -10,7 +10,7 @@ export const site = {
 };
 
 export function whatsappLink(text: string = site.whatsappMessage) {
-  return `https://api.whatsapp.com/send?phone=${site.whatsapp}&text=${encodeURIComponent(text)}`;
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 
-export const instagramLink = `https://instagram.com/${site.instagram}`;
+export const instagramLink = `https://www.instagram.com/${site.instagram}/`;

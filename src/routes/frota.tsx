@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Car } from "lucide-react";
 import hero from "@/assets/hero-car.jpg";
 import { PageHero, Section, SectionTitle, CtaBand } from "@/components/sections/Blocks";
 import { frota } from "@/data/content";
@@ -25,11 +24,13 @@ function Page() {
         <SectionTitle eyebrow="Nossos veículos" title="Escolha o ideal para" highlight="sua viagem" />
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {frota.map((v) => (
-            <div key={v.name} className="rounded-xl border bg-card p-6">
-              <Car className="size-8 text-primary" />
-              <h3 className="mt-4 text-lg font-semibold">{v.name}</h3>
+            <div key={v.name} className="overflow-hidden rounded-xl border bg-card">
+              <img src={v.image} alt={v.name} loading="lazy" width={1024} height={640} className="aspect-[16/10] w-full object-cover" />
+              <div className="p-6">
+              <h3 className=" text-lg font-semibold">{v.name}</h3>
               <p className="eyebrow mt-1">{v.seats}</p>
               <p className="mt-3 text-sm text-muted-foreground">{v.text}</p>
+              </div>
             </div>
           ))}
         </div>
