@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, MessageCircle, Instagram, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { site, whatsappLink, instagramLink } from "@/config/site";
 
 const nav = [
@@ -29,7 +29,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b bg-background/90 backdrop-blur">
         <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
           <Link to="/" aria-label="Meu Motorista — início">
-            <img src={logo.url} alt="Meu Motorista" className="h-9 w-auto" />
+            <img src={logo} alt="Meu Motorista" className="h-9 w-auto" />
           </Link>
           <nav className="hidden lg:flex gap-6 text-sm">
             {nav.map((n) => (
@@ -61,7 +61,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="border-t bg-surface">
         <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-3 text-sm">
           <div>
-            <img src={logo.url} alt="Meu Motorista" className="h-10 w-auto" loading="lazy" />
+            <img src={logo} alt="Meu Motorista" className="h-10 w-auto" loading="lazy" />
             <p className="mt-4 text-muted-foreground">Motoristas particulares com carros próprios da empresa, para pessoas e empresas. Vamos para qualquer lugar do Brasil.</p>
           </div>
           <div>
